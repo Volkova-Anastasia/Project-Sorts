@@ -1,7 +1,14 @@
 #include <iostream>
-using namespace std;
+#include "Grafic.cpp"
+#include <vector>
+#include <chrono>
 
-void QuickSort(int *ar, int start, int end) {
+using namespace std;
+using namespace chrono;
+
+
+void QuickSort(int *ar, int start, int end){
+
 
     int left = start;
     int right = end;
@@ -28,15 +35,21 @@ void QuickSort(int *ar, int start, int end) {
     pivot = start;
     start = left;
     end = right;
+
     if(start < pivot){
         QuickSort(ar, start, pivot-1);
     }
     if(end > pivot){
         QuickSort(ar, pivot+1, end);
     }
+
+
+
 }
 
-int main(){
+auto quiq(){
+
+
 
     int count;
     cout<<"Enter the size of the array: ";
@@ -46,9 +59,28 @@ int main(){
     for (int i=0; i < count;i++) {
         cin >> arr[i];
     }
+
+    vector<int> array_old;
+    for(int i = 0; i<count;i++ ){
+        array_old.push_back(arr[i]);
+    }
+    graf(count,array_old);
+
+    system_clock::time_point start = system_clock::now();
     QuickSort(arr, 0, count-1);
+    system_clock::time_point end = system_clock::now();
+    duration<double> sec = end - start;
+    cout << sec.count() << " sec." << endl;
+    vector<int> array_new;
+    for(int i = 0; i<count;i++ ){
+        array_new.push_back(arr[i]);
+    }
+    graf(count,array_new);
     cout << "Result: ";
     for(int i=0;i<count;i++) {
         cout << arr[i] << " ";
     }
-};
+
+
+    return 0;
+}
