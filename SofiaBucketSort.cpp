@@ -54,7 +54,7 @@ void bucketSort(int array[], int n)
     }
     for (k = 0, i = 0; i < 3; i++)
     {
-        // now using quicksort to sort the elements of buckets
+        // Используя быструю сортировку, сортируем элементы в "карманах"
         qsort(buckets[i].value, buckets[i].count, sizeof(int), &compareIntegers);
         for (j = 0; j < buckets[i].count; j++)
         {
