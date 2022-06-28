@@ -1,0 +1,3 @@
+C:/Users/Chesh/OneDrive/Документы/GitHub/Project-Sorts/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Chesh/OneDrive/Документы/GitHub/Project-Sorts/cmake-build-debug/CMakeFiles/Project_Sorts.dir
+C:/Users/Chesh/OneDrive/Документы/GitHub/Project-Sorts/cmake-build-debug/CMakeFiles/rebuild_cache.dir
