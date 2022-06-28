@@ -3,7 +3,7 @@
 //
 #pragma once
 #include "Grafic.cpp"
-#include "Masha.cpp"
+#include "MashaQuick.cpp"
 #include "SofiaBucket.cpp"
 #include <string>
 #include <iostream>
