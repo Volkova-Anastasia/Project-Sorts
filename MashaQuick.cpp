@@ -1,8 +1,8 @@
 #include <iostream>
-#include "Grafic.cpp"
+#include "mainHeader.h"
 #include <vector>
 #include <chrono>
-
+#pragma once
 using namespace std;
 using namespace chrono;
 
@@ -42,9 +42,6 @@ void QuickSort(int *ar, int start, int end){
     if(end > pivot){
         QuickSort(ar, pivot+1, end);
     }
-
-
-
 }
 
 auto quiq(){
@@ -64,7 +61,7 @@ auto quiq(){
     for(int i = 0; i<count;i++ ){
         array_old.push_back(arr[i]);
     }
-    graf(count,array_old);
+    graf_m(count,array_old);
 
     system_clock::time_point start = system_clock::now();
     QuickSort(arr, 0, count-1);
@@ -75,7 +72,7 @@ auto quiq(){
     for(int i = 0; i<count;i++ ){
         array_new.push_back(arr[i]);
     }
-    graf(count,array_new);
+    graf_m(count,array_new);
     cout << "Result: ";
     for(int i=0;i<count;i++) {
         cout << arr[i] << " ";
