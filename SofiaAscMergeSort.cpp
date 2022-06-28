@@ -46,19 +46,27 @@ void mergeSort(int* a, int n)
 
 int main()
 {
-    int a[8];
+    std::cout <<"\nInsert number of numbers"<< std::endl;
+    int count;
+    std::cin >> count;
+    int a[count];
+    int = count, j, k, n;
+    
+    n = i;
+    
     // Заполнение массива случайными числами
-    for (int i = 0; i < 8; i++)
+    std::cout << "insert numbers"<< std::endl;
+    for (int i = 0; i < count; i++)
     {
-        cin >> a[i]; // Вводим с клавиатуры значение ячейки массива
+        std::cin >> a[i]; // Вводим с клавиатуры значение ячейки массива
     }
     // Вывод элементов массива до сортировки
-    for (int i = 0; i < 8; i++)
+    for (int i = 0; i < count; i++)
         printf("%d ", a[i]);
     printf("\n");
-    mergeSort(a, 8); // вызов функции сортировки
+    mergeSort(a, n); // вызов функции сортировки
     // Вывод элементов массива после сортировки
-    for (int i = 0; i < 8; i++)
-        printf("%d ", a[i]);
+    for (int k = 0; k < i; k++)
+        printf("%d ", a[k]);
     return 0;
 }
